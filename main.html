@@ -1,0 +1,336 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Artificial Immune Systems</title>
+<!--Generated on Mon Nov 18 18:41:50 2024 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Artificial Immune Systems</h1>
+<div class="ltx_authors">
+<span class="ltx_creator ltx_role_author">
+<span class="ltx_personname">Gaurav Dutt(x2022ezl@stfx.ca)
+</span></span>
+</div>
+
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Introduction</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">Algorithms and systems that draw inspiration from the human immune system are known as artificial immune systems (AIS) as all AIS algorithms imitate the characteristics and behavior of immune cells, particularly B-cells, T-cells, and dendritic cells (DCs), the resulting algorithms vary in complexity and are capable performing a variety of tasks. The human immune system is a resilient, decentralized, adaptive, and error-tolerant mechanism. Such characteristics are quite useful while creating new computer systems. Because different algorithms implement distinct attributes of different cells, the discipline of AIS spans a range of methods, unlike certain other bio-inspired techniques like genetic algorithms and neural networks <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib1" title="Artificial immune systems" class="ltx_ref">6</a>]</cite>.
+The objective of artificial immune systems (AIS) is to model the structure and function of the immune system for use in computer systems and study how these systems might be used to solve computational issues in information technology, engineering, and mathematics. With an interest in machine learning, AIS is a subfield of natural computation and biologically inspired computing that falls under the larger umbrella of artificial intelligence <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib2" title="Artificial immune system — Wikipedia, the free encyclopedia" class="ltx_ref">12</a>]</cite>.</p>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Biological connection</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">The body’s immune system embodies several organs, cells, and chemicals. The immune system’s operations are not governed by a single organ. The immune system’s primary function is to keep an eye on the body and look for foreign substances that could lead to illness <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib3" title="Artificial immune systems: a novel approach to pattern recognition" class="ltx_ref">5</a>]</cite>.The human body’s immune system is made up of organs, cells, and chemicals. The immune system’s operations are not primarily governed by a single organ. Monitoring the body and looking for foreign substances that could cause diseases is one of the immune system’s crucial functions <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib4" title="Web mining: applications" class="ltx_ref">9</a>]</cite>.
+<br class="ltx_break">The immune system has various types of cells which are performing different functions at different locations in the body. Two of the most important cells in the body are : T-cells and B-cells, these both are white blood cells. They develop in the bone marrow, so called B-cells but T-cells shifts to thymus to fully develop so t-cells before they spread in lymphatic vessels and blood in the body <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib5" title="Artificial immune systems (ais)-a new paradigm for heuristic decision making" class="ltx_ref">2</a>]</cite>.
+<br class="ltx_break">
+<br class="ltx_break">There are three categories in T-cells <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib5" title="Artificial immune systems (ais)-a new paradigm for heuristic decision making" class="ltx_ref">2</a>]</cite>:</p>
+<ul id="S2.I1" class="ltx_itemize">
+<li id="S2.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S2.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">T-helper cells – These cells are requires for the awakening of B-cells.</p>
+</div>
+</li>
+<li id="S2.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S2.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Killer T-cells – There role is to foreign invaders and inject killing chemicals in order to kill them in the body.</p>
+</div>
+</li>
+<li id="S2.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S2.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Suppressor T-cells – They hold back the action of additional immune cells in the body , in order to prevent the body from autoimmune health problems and other immune sensitive reactions.</p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">B-cells job is to produce and secrete antibodies, which are certain proteins that attach to antigens. Only one particular antibody can pe produced by one B-cell. The invasive organism’s surface contains the antigen, and when an antibody binds to it, it signals the destruction of the invading cell <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib5" title="Artificial immune systems (ais)-a new paradigm for heuristic decision making" class="ltx_ref">2</a>]</cite>.
+<br class="ltx_break"></p>
+</div>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>Artificial Immune System Algorithms</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">There are 4 primarily used algorithms which are being used to solve the computational problems. This algorithms can also be applied to any problem which is directly or indirectly related to immune system and with the use of algorithms comes the advancement <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib6" title="Recent advances in artificial immune systems: models and applications" class="ltx_ref">4</a>]</cite>.</p>
+<ul id="S3.I1" class="ltx_itemize">
+<li id="S3.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S3.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Negative selection algorithm (NSA)</span>
+The Negative Selection Algorithm (NSA) in AIS plays a crucial role as a detector generation algorithm, initially introduced by Forrest et al. It mimics the T cells’ screening process in the thymus to produce mature detectors that do not react to self. It has proven to be effective in detecting anomalies, classifying data, and diagnosing faults <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib7" title="" class="ltx_ref">13</a>]</cite>. 
+<br class="ltx_break">The main obstacle for NSA is to successfully create efficient detectors. The conventional RNSA creates detectors in a random manner until the Estimated Coverage (c0) reaches a certain threshold. In high-dimensional feature space, samples are very sparse and unevenly distributed. This causes c0 to not accurately represent nonself sample coverage, resulting in algorithms converging quickly and ending unexpectedly with only a few detectors created <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib7" title="" class="ltx_ref">13</a>]</cite>.</p>
+</div>
+</li>
+<li id="S3.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S3.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Artificial immune networks (AIN)</span>
+Numerous AIN algorithms have been created utilizing Jerne’s idiotypic network concept. They have been successfully used for various purposes such as clustering, classification, optimization, and domain specific issues [3]. AINs share many similarities with evolutionary algorithms, as both are population-based meta-heuristics that involve variation and selection mechanisms among individuals in the population. Furthermore, an AIN shares similarities with coevolutionary algorithms, which are a type of evolutionary computation, a branch of evolutionary algorithms involving individuals interacting with each other <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib8" title="A solution concept for artificial immune networks: a coevolutionary perspective" class="ltx_ref">3</a>]</cite>.</p>
+</div>
+</li>
+<li id="S3.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S3.I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Clonal selection algorithm (CLONALG)</span>
+Clonal Selection Algorithm is a unique type of Artificial Immune System that utilizes the clonal selection is a primary mechanism in Artificial Immune Systems <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib9" title="Comparison study for clonal selection algorithm and genetic algorithm" class="ltx_ref">11</a>]</cite>.
+The first step of the algorithm involves establishing a target function f(x) that must be maximized. Several potential candidate solutions are generated, their affinity will be calculated using antibodies in the objective function, identifying which ones will be replicated for the next stage. The copied values are altered, adjusted with a set proportion and the affinities are reassessed and organized. Following specific assessments of affinity, the solution with the lowest value of affinity is the one that is most closely related to our problem <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib9" title="Comparison study for clonal selection algorithm and genetic algorithm" class="ltx_ref">11</a>]</cite>.</p>
+</div>
+</li>
+<li id="S3.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S3.I1.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Dendritic cell algorithms (DCA)</span>
+The Dendritic Cell Algorithm is a nature-inspired algorithm found within the Artificial Immune Systems (AIS) category of Computational Intelligence. It has close connections to other AIS algorithms, like Negative Selection and Clonal Selection as these all falls under the biologically inspired algorithms.The Dendritic Cell Algorithm mimics the actions of dendritic cells, a specific type of cells involved in presenting antigens in the human immune system. Dendritic cells are essential for connecting the innate and adaptive immune responses by processing and showing antigens to T-cells <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib10" title="Dendritic cell algorithm" class="ltx_ref">1</a>]</cite>.
+<br class="ltx_break">There are various steps to follow in the Dendritic Cell Algorithm which are signal processing, Dendritic Cell Maturation, Antigen Presentation, Classification and at last you will conduct additional examination or decision-making using the categorized antigens <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib10" title="Dendritic cell algorithm" class="ltx_ref">1</a>]</cite>.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">4 </span>Applications</h2>
+
+<div id="S4.p1" class="ltx_para">
+<p class="ltx_p">While there have been numerous successful uses of AIS, there are still only a limited number of noteworthy instances where AISs are implemented significantly in industry which are as follows
+<br class="ltx_break"></p>
+<ul id="S4.I1" class="ltx_itemize">
+<li id="S4.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S4.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Optimization
+To improve the convergence characteristics of Genetic Algorithms (GAs), particularly when dealing with design constraints, Hajela and colleagues (1997) proposed a novel approach by simulating the immune system within a GA framework. Their work was driven by the observation that GAs applied to design constraints are highly sensitive to the selection of algorithm parameters, which can significantly influence the convergence rate <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib12" title="GA based simulation of immune networks applications in structural optimization" class="ltx_ref">7</a>]</cite>.</p>
+</div>
+</li>
+<li id="S4.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S4.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Recognizing DNA
+The system that was developed utilized methods like B-cells and B-cell activation, immune network theory, gene repositories, mutation, and antibodies to generate a series of antibody sequences suitable for classification and achieved a error rate of only 3% <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib13" title="An overview of artificial immune systems" class="ltx_ref">10</a>]</cite>.</p>
+</div>
+</li>
+<li id="S4.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S4.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Fraud Detection
+Work in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib11" title="Learning using an artificial immune system" class="ltx_ref">8</a>]</cite> suggested the concept that an AIS could generate a visual interpretation of loan and mortgage application information to help detect fraudulent behavior.</p>
+</div>
+</li>
+<li id="S4.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S4.I1.i4.p1" class="ltx_para">
+<p class="ltx_p">Computer Security
+The issue of safeguarding computers from viruses, unauthorized users, etc. offers a vast area of study for artificial immune systems. The presence of a biological immune system to defend against viruses and bacteria is a strong inspiration for creating an artificial immune system to tackle computer viruses and hackers. <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib13" title="An overview of artificial immune systems" class="ltx_ref">10</a>]</cite></p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S5" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">5 </span>Summary</h2>
+
+<div id="S5.p1" class="ltx_para">
+<p class="ltx_p">Taking inspiration from the immune system has been highly beneficial in tackling various computational issues. The immune system is an incredible educational system. By utilizing B-cells and T-cells, the immune system is able to initiate a response against foreign antigens and eliminate them from the body. This is accomplished by first stimulating B-cells, then cloning and mutating new antibodies. The immune system can adapt to new infections due to the diversity it generates. The body’s defense system is capable of storing memory of antigens; enabling a faster, secondary immune reaction upon reinfection to eradicate the pathogen. Multiple theories explain how the immune system stores information in a memory-like way: including the clonal selection theory, memory cells concept, and immune network theory with idiotypic antibody interactions. <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib13" title="An overview of artificial immune systems" class="ltx_ref">10</a>]</cite>
+<br class="ltx_break">By studying this natural mechanism, scientists have discovered several fascinating operations and mechanisms in the immune system that can serve as a useful analogy for computing. The examination of Artificial Immune Systems (AIS) has shown numerous applications of immune metaphors in different fields. The suggested structure for AIS was described, highlighting that AIS can be conceptualized as a layered framework consisting of representations, affinity measures, and immune algorithms. <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib13" title="An overview of artificial immune systems" class="ltx_ref">10</a>]</cite></p>
+</div>
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul id="bib.L1" class="ltx_biblist">
+<li id="bib.bib10" class="ltx_bibitem ltx_bib_misc">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[1]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">A. Afternoon</span><span class="ltx_text ltx_bib_year"> (n.d.)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Dendritic cell algorithm</span>.
+</span>
+<span class="ltx_bibblock">Note: <span class="ltx_text ltx_bib_note">Accessed: 2024-11-17</span>
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><a href="https://algorithmafternoon.com/immune/dendritic_cell_algorithm/" title="" class="ltx_ref ltx_bib_external">Link</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S3.I1.i4.p1" title="In 3 Artificial Immune System Algorithms ‣ Artificial Immune Systems" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4th item</span></a>.
+</span>
+</li>
+<li id="bib.bib5" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[2]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">U. Aickelin</span><span class="ltx_text ltx_bib_year"> (2008)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Artificial immune systems (ais)-a new paradigm for heuristic decision making</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">arXiv preprint arXiv:0801.4314</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><a href="https://arxiv.org/pdf/0801.4314" title="" class="ltx_ref ltx_bib_external">Link</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S2.p1" title="2 Biological connection ‣ Artificial Immune Systems" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§2</span></a>.
+</span>
+</li>
+<li id="bib.bib8" class="ltx_bibitem ltx_bib_inproceedings">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[3]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">O. Alonso, F. A. Gonzalez, F. Niño, and J. Galeano</span><span class="ltx_text ltx_bib_year"> (2007)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">A solution concept for artificial immune networks: a coevolutionary perspective</span>.
+</span>
+<span class="ltx_bibblock">In <span class="ltx_text ltx_bib_inbook">International Conference on Artificial Immune Systems</span>,
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_pages"> pp. 35–46</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><a href="https://link.springer.com/chapter/10.1007/978-3-540-73922-7_4" title="" class="ltx_ref ltx_bib_external">Link</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S3.I1.i2.p1" title="In 3 Artificial Immune System Algorithms ‣ Artificial Immune Systems" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2nd item</span></a>.
+</span>
+</li>
+<li id="bib.bib6" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[4]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">D. Dasgupta, S. Yu, and F. Nino</span><span class="ltx_text ltx_bib_year"> (2011)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Recent advances in artificial immune systems: models and applications</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Applied Soft Computing</span> <span class="ltx_text ltx_bib_volume">11</span> (<span class="ltx_text ltx_bib_number">2</span>), <span class="ltx_text ltx_bib_pages"> pp. 1574–1587</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><a href="https://www.sciencedirect.com/science/article/pii/S1568494610002723" title="" class="ltx_ref ltx_bib_external">Link</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S3.p1" title="3 Artificial Immune System Algorithms ‣ Artificial Immune Systems" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§3</span></a>.
+</span>
+</li>
+<li id="bib.bib3" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[5]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">L. N. de Castro and J. Timmis</span><span class="ltx_text ltx_bib_year"> (2002)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Artificial immune systems: a novel approach to pattern recognition</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><a href="https://kar.kent.ac.uk/13832/1/ArtCastro.pdf" title="" class="ltx_ref ltx_bib_external">Link</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S2.p1" title="2 Biological connection ‣ Artificial Immune Systems" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§2</span></a>.
+</span>
+</li>
+<li id="bib.bib1" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[6]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">J. Greensmith, A. Whitbrook, and U. Aickelin</span><span class="ltx_text ltx_bib_year"> (2005)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Artificial immune systems</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Dostopno na: https://arxiv. org/ftp/arxiv/papers/1006/1006.4949. pdf [24. 8. 2022]</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><a href="https://arxiv.org/pdf/1006.4949" title="" class="ltx_ref ltx_bib_external">Link</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S1.p1" title="1 Introduction ‣ Artificial Immune Systems" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§1</span></a>.
+</span>
+</li>
+<li id="bib.bib12" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[7]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">P. Hajela, J. Yoo, and J. Lee</span><span class="ltx_text ltx_bib_year"> (1997)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">GA based simulation of immune networks applications in structural optimization</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Engineering Optimization</span> <span class="ltx_text ltx_bib_volume">29</span> (<span class="ltx_text ltx_bib_number">1-4</span>), <span class="ltx_text ltx_bib_pages"> pp. 131–149</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S4.I1.i1.p1" title="In 4 Applications ‣ Artificial Immune Systems" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1st item</span></a>.
+</span>
+</li>
+<li id="bib.bib11" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[8]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">J. E. Hunt and D. E. Cooke</span><span class="ltx_text ltx_bib_year"> (1996)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Learning using an artificial immune system</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Journal of Network and Computer Applications</span> <span class="ltx_text ltx_bib_volume">19</span> (<span class="ltx_text ltx_bib_number">2</span>), <span class="ltx_text ltx_bib_pages"> pp. 189–212</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><span class="ltx_text issn ltx_bib_external">ISSN 1084-8045</span>,
+<a href="https://dx.doi.org/https%3A//doi.org/10.1006/jnca.1996.0014" title="" class="ltx_ref doi ltx_bib_external">Document</a>,
+<a href="https://www.sciencedirect.com/science/article/pii/S1084804596900144" title="" class="ltx_ref ltx_bib_external">Link</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S4.I1.i3.p1" title="In 4 Applications ‣ Artificial Immune Systems" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3rd item</span></a>.
+</span>
+</li>
+<li id="bib.bib4" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[9]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">A. Scime</span><span class="ltx_text ltx_bib_year"> (2005)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Web mining: applications</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><a href="https://www.researchgate.net/profile/Wee-Keong-Ng/publication/238052308_Web_Usage_Mining_Algorithms_and_Results/links/00463534a913ed16d3000000/Web-Usage-Mining-Algorithms-and-Results.pdf" title="" class="ltx_ref ltx_bib_external">Link</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S2.p1" title="2 Biological connection ‣ Artificial Immune Systems" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§2</span></a>.
+</span>
+</li>
+<li id="bib.bib13" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[10]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">J. Timmis, T. Knight, L. N. de Castro, and E. Hart</span><span class="ltx_text ltx_bib_year"> (2004)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">An overview of artificial immune systems</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Computation in cells and tissues: Perspectives and tools of thought</span>, <span class="ltx_text ltx_bib_pages"> pp. 51–91</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><a href="https://kar.kent.ac.uk/14054/1/An_Overview_of_Artificial_Immune_Systems.pdf" title="" class="ltx_ref ltx_bib_external">Link</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S4.I1.i2.p1" title="In 4 Applications ‣ Artificial Immune Systems" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2nd item</span></a>,
+<a href="#S4.I1.i4.p1" title="In 4 Applications ‣ Artificial Immune Systems" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4th item</span></a>,
+<a href="#S5.p1" title="5 Summary ‣ Artificial Immune Systems" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§5</span></a>.
+</span>
+</li>
+<li id="bib.bib9" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[11]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">E. D. Ulker and S. Ulker</span><span class="ltx_text ltx_bib_year"> (2012)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Comparison study for clonal selection algorithm and genetic algorithm</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">arXiv preprint arXiv:1209.2717</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><a href="https://arxiv.org/pdf/1209.2717" title="" class="ltx_ref ltx_bib_external">Link</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S3.I1.i3.p1" title="In 3 Artificial Immune System Algorithms ‣ Artificial Immune Systems" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3rd item</span></a>.
+</span>
+</li>
+<li id="bib.bib2" class="ltx_bibitem ltx_bib_misc">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[12]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">Wikipedia contributors</span><span class="ltx_text ltx_bib_year"> (2024)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Artificial immune system — Wikipedia, the free encyclopedia</span>.
+</span>
+<span class="ltx_bibblock">Note: <span class="ltx_text ltx_bib_note">[Online; accessed 17-November-2024]</span>
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><a href="https://en.wikipedia.org/w/index.php?title=Artificial_immune_system&amp;oldid=1240537176" title="" class="ltx_ref ltx_bib_external">Link</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S1.p1" title="1 Introduction ‣ Artificial Immune Systems" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§1</span></a>.
+</span>
+</li>
+<li id="bib.bib7" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[13]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">T. Yang, W. Chen, and T. Li</span><span class="ltx_text ltx_bib_year"> (2017)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title"></span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Open Physics</span> <span class="ltx_text ltx_bib_volume">15</span> (<span class="ltx_text ltx_bib_number">1</span>), <span class="ltx_text ltx_bib_pages"> pp. 121–134</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><a href="https://doi.org/10.1515/phys-2017-0013" title="" class="ltx_ref ltx_bib_external">Link</a>,
+<a href="https://dx.doi.org/doi%3A10.1515/phys-2017-0013" title="" class="ltx_ref doi ltx_bib_external">Document</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S3.I1.i1.p1" title="In 3 Artificial Immune System Algorithms ‣ Artificial Immune Systems" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1st item</span></a>.
+</span>
+</li>
+</ul>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Mon Nov 18 18:41:50 2024 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+</div></footer>
+</div>
+</body>
+</html>
