@@ -1,0 +1,69 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{float}  % Add this package
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{placeins}
+\bibliographystyle{plainurl}
+\usepackage{xurl}
+\title {Artificial Immune Systems}
+\author{Gaurav Dutt(x2022ezl@stfx.ca)}
+
+\begin{document}
+\maketitle
+\section{Introduction}
+Algorithms and systems that draw inspiration from the human immune system are known as artificial immune systems (AIS) as all AIS algorithms imitate the characteristics and behavior of immune cells, particularly B-cells, T-cells, and dendritic cells (DCs), the resulting algorithms vary in complexity and are capable performing a variety of tasks. The human immune system is a resilient, decentralized, adaptive, and error-tolerant mechanism. Such characteristics are quite useful while creating new computer systems. Because different algorithms implement distinct attributes of different cells, the discipline of AIS spans a range of methods, unlike certain other bio-inspired techniques like genetic algorithms and neural networks \cite{greensmith2005artificial}.
+The objective of artificial immune systems (AIS) is to model the structure and function of the immune system for use in computer systems and study how these systems might be used to solve computational issues in information technology, engineering, and mathematics. With an interest in machine learning, AIS is a subfield of natural computation and biologically inspired computing that falls under the larger umbrella of artificial intelligence \cite{enwiki:1240537176}.
+\section{Biological connection}
+The body's immune system embodies several organs, cells, and chemicals. The immune system's operations are not governed by a single organ. The immune system's primary function is to keep an eye on the body and look for foreign substances that could lead to illness \cite{de2002artificial}.The human body's immune system is made up of organs, cells, and chemicals. The immune system's operations are not primarily governed by a single organ. Monitoring the body and looking for foreign substances that could cause diseases is one of the immune system's crucial functions \cite{scime2005web}.\\
+The immune system has various types of cells which are performing different functions at different locations in the body. Two of the most important cells in the body are : T-cells and B-cells, these both are white blood cells. They develop in the bone marrow, so called B-cells but T-cells shifts to thymus to fully develop so t-cells before they spread in lymphatic vessels and blood in the body \cite{aickelin2008artificial}.\\
+\\
+There are three categories in T-cells \cite{aickelin2008artificial}:
+\begin{itemize}
+    \item T-helper cells – These cells are requires for the awakening of B-cells.
+    \item Killer T-cells – There role is to foreign invaders and inject killing chemicals in order to kill them in the body.
+    \item Suppressor T-cells – They hold back the action of additional immune cells in the body , in order to prevent the body from autoimmune health problems and other immune sensitive reactions.
+\end{itemize}
+B-cells job is to produce and secrete antibodies, which are certain proteins that attach to antigens. Only one particular antibody can pe produced by one B-cell. The invasive organism's surface contains the antigen, and when an antibody binds to it, it signals the destruction of the invading cell \cite{aickelin2008artificial}.\\
+
+\section{Artificial Immune System Algorithms}
+There are 4 primarily used algorithms which are being used to solve the computational problems. This algorithms can also be applied to any problem which is directly or indirectly related to immune system and with the use of algorithms comes the advancement \cite{dasgupta2011recent}.
+\begin{itemize}
+    \item \textbf{Negative selection algorithm (NSA)}
+The Negative Selection Algorithm (NSA) in AIS plays a crucial role as a detector generation algorithm, initially introduced by Forrest et al. It mimics the T cells' screening process in the thymus to produce mature detectors that do not react to self. It has proven to be effective in detecting anomalies, classifying data, and diagnosing faults \cite{YangChenLi+2017+121+134}. \\
+The main obstacle for NSA is to successfully create efficient detectors. The conventional RNSA creates detectors in a random manner until the Estimated Coverage (c0) reaches a certain threshold. In high-dimensional feature space, samples are very sparse and unevenly distributed. This causes c0 to not accurately represent nonself sample coverage, resulting in algorithms converging quickly and ending unexpectedly with only a few detectors created \cite{YangChenLi+2017+121+134}. 
+    \item \textbf{Artificial immune networks (AIN)}
+Numerous AIN algorithms have been created utilizing Jerne's idiotypic network concept. They have been successfully used for various purposes such as clustering, classification, optimization, and domain specific issues [3]. AINs share many similarities with evolutionary algorithms, as both are population-based meta-heuristics that involve variation and selection mechanisms among individuals in the population. Furthermore, an AIN shares similarities with coevolutionary algorithms, which are a type of evolutionary computation, a branch of evolutionary algorithms involving individuals interacting with each other \cite{alonso2007solution}. 
+    \item \textbf{Clonal selection algorithm (CLONALG)}
+Clonal Selection Algorithm is a unique type of Artificial Immune System that utilizes the clonal selection is a primary mechanism in Artificial Immune Systems \cite{ulker2012comparison}.
+The first step of the algorithm involves establishing a target function f(x) that must be maximized. Several potential candidate solutions are generated, their affinity will be calculated using antibodies in the objective function, identifying which ones will be replicated for the next stage. The copied values are altered, adjusted with a set proportion and the affinities are reassessed and organized. Following specific assessments of affinity, the solution with the lowest value of affinity is the one that is most closely related to our problem \cite{ulker2012comparison}. 
+    \item \textbf{Dendritic cell algorithms (DCA)}
+The Dendritic Cell Algorithm is a nature-inspired algorithm found within the Artificial Immune Systems (AIS) category of Computational Intelligence. It has close connections to other AIS algorithms, like Negative Selection and Clonal Selection as these all falls under the biologically inspired algorithms.The Dendritic Cell Algorithm mimics the actions of dendritic cells, a specific type of cells involved in presenting antigens in the human immune system. Dendritic cells are essential for connecting the innate and adaptive immune responses by processing and showing antigens to T-cells \cite{dendritic_algorithm}.\\
+There are various steps to follow in the Dendritic Cell Algorithm which are signal processing, Dendritic Cell Maturation, Antigen Presentation, Classification and at last you will conduct additional examination or decision-making using the categorized antigens \cite{dendritic_algorithm}. 
+\end{itemize}
+\section{Applications}
+While there have been numerous successful uses of AIS, there are still only a limited number of noteworthy instances where AISs are implemented significantly in industry which are as follows\\
+\begin{itemize}
+    \item Optimization
+To improve the convergence characteristics of Genetic Algorithms (GAs), particularly when dealing with design constraints, Hajela and colleagues (1997) proposed a novel approach by simulating the immune system within a GA framework. Their work was driven by the observation that GAs applied to design constraints are highly sensitive to the selection of algorithm parameters, which can significantly influence the convergence rate \cite{hajela1997ga}.
+    \item Recognizing DNA
+The system that was developed utilized methods like B-cells and B-cell activation, immune network theory, gene repositories, mutation, and antibodies to generate a series of antibody sequences suitable for classification and achieved a error rate of only 3\% \cite{timmis2004overview}.
+    \item Fraud Detection
+Work in \cite{HUNT1996189} suggested the concept that an AIS could generate a visual interpretation of loan and mortgage application information to help detect fraudulent behavior. 
+    \item Computer Security
+The issue of safeguarding computers from viruses, unauthorized users, etc. offers a vast area of study for artificial immune systems. The presence of a biological immune system to defend against viruses and bacteria is a strong inspiration for creating an artificial immune system to tackle computer viruses and hackers. \cite{timmis2004overview}
+    \end{itemize}
+\section{Summary}
+Taking inspiration from the immune system has been highly beneficial in tackling various computational issues. The immune system is an incredible educational system. By utilizing B-cells and T-cells, the immune system is able to initiate a response against foreign antigens and eliminate them from the body. This is accomplished by first stimulating B-cells, then cloning and mutating new antibodies. The immune system can adapt to new infections due to the diversity it generates. The body's defense system is capable of storing memory of antigens; enabling a faster, secondary immune reaction upon reinfection to eradicate the pathogen. Multiple theories explain how the immune system stores information in a memory-like way: including the clonal selection theory, memory cells concept, and immune network theory with idiotypic antibody interactions. \cite{timmis2004overview}\\
+By studying this natural mechanism, scientists have discovered several fascinating operations and mechanisms in the immune system that can serve as a useful analogy for computing. The examination of Artificial Immune Systems (AIS) has shown numerous applications of immune metaphors in different fields. The suggested structure for AIS was described, highlighting that AIS can be conceptualized as a layered framework consisting of representations, affinity measures, and immune algorithms. \cite{timmis2004overview}
+
+
+
+
+\bibliography{bibliography.bib}
+\bibliographystyle{plain}
+
+\end{document}
