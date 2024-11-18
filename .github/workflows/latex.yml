@@ -1,25 +1,28 @@
-name: LaTeX Compilation
+name: Deploy LaTeX to GitHub Pages
 
 on:
   push:
     branches:
-      - main
+      - main  # Change this to your default branch if it's different
 
 jobs:
-  compile-latex:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+
       - name: Install LaTeX
         run: |
           sudo apt-get update
           sudo apt-get install -y texlive-full
+
       - name: Compile LaTeX
         run: |
-          ./latexmk
-      - name: Upload PDF
-        uses: actions/upload-artifact@v2
+          latexmk -pdf document.tex  # Ensure 'document.tex' is the correct filename
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          name: document
-          path: document.pdf
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./  # Change this if your PDF is in a subdirectory
