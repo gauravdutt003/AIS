@@ -1,16 +1,16 @@
 /* Body Background Color */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f8ff; /* Light blue background */
-  color: #333; /* Dark gray text */
+  background-color: #333333; /* Dark gray background */
+  color: #ffffff; /* White text */
   margin: 0;
   padding: 0;
 }
 
 /* Header Section */
 .header {
-  background-color: #0074D9; /* Dark blue */
-  color: white; /* White text */
+  background-color: #444444; /* Slightly lighter gray for contrast */
+  color: #ffffff; /* White text */
   text-align: center;
   padding: 20px;
 }
@@ -21,16 +21,18 @@ body {
 
 .presenter {
   font-size: 1em;
+  color: #bbbbbb; /* Light gray for less emphasis */
 }
 
 /* Links */
 a {
-  color: #ff4500; /* Orange links */
+  color: #1e90ff; /* Bright blue links for contrast */
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
+  color: #87cefa; /* Lighter blue on hover */
 }
 
 /* Content Section */
@@ -38,14 +40,29 @@ a:hover {
   padding: 20px;
   margin: 20px auto;
   max-width: 800px;
-  background-color: #ffffff; /* White background */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  background-color: #444444; /* Slightly lighter gray box */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
   border-radius: 8px; /* Rounded corners */
 }
 
 /* Headings */
 .content h2 {
-  color: #0074D9; /* Dark blue headings */
-  border-bottom: 2px solid #ff4500; /* Orange underline */
+  color: #ffffff; /* White headings */
+  border-bottom: 2px solid #1e90ff; /* Bright blue underline */
   padding-bottom: 5px;
+}
+
+/* Paragraph Text */
+.content p {
+  color: #e0e0e0; /* Light gray for better readability */
+}
+
+/* Footer Section */
+.footer {
+  background-color: #444444; /* Same as content box */
+  color: #bbbbbb; /* Light gray text */
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+  font-size: 0.9em;
 }
