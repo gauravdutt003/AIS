@@ -19,7 +19,7 @@ jobs:
 
       - name: Compile LaTeX
         run: |
-          latexmk -pdf document.tex  # Ensure 'document.tex' is the correct filename
+          latexmk -pdf main.tex  # Ensure 'document.tex' is the correct filename
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
