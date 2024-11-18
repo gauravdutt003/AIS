@@ -16,6 +16,10 @@ jobs:
         run: |
           choco install miktex -y  # Install MiKTeX using Chocolatey
 
+      - name: Install latexmk
+        run: |
+          miktex-console --install latexmk  # Install latexmk using MiKTeX console
+
       - name: Compile LaTeX with latexmk
         run: |
           latexmk -pdf main.tex  # Compile your main.tex file with latexmk
