@@ -4,7 +4,7 @@ body {
   background-color: #333333; /* Dark gray background */
   color: #ffffff; /* White text */
   margin: 0;
-  padding: 0;
+  padding: 20px; /* Add space around the content */
 }
 
 /* Header Section */
@@ -37,7 +37,7 @@ a:hover {
 
 /* Content Section */
 .content {
-  padding: 20px;
+  padding: 30px; /* Add space inside the content box */
   margin: 20px auto;
   max-width: 800px;
   background-color: #444444; /* Slightly lighter gray box */
@@ -50,11 +50,13 @@ a:hover {
   color: #ffffff; /* White headings */
   border-bottom: 2px solid #1e90ff; /* Bright blue underline */
   padding-bottom: 5px;
+  margin-bottom: 20px; /* Add space below headings */
 }
 
 /* Paragraph Text */
 .content p {
   color: #e0e0e0; /* Light gray for better readability */
+  margin-bottom: 15px; /* Add space below paragraphs */
 }
 
 /* Footer Section */
