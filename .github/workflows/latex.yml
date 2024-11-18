@@ -1,28 +1,21 @@
-name: Deploy LaTeX to GitHub Pages
+name: Build LaTeX Document
 
 on:
   push:
     branches:
-      - main  # Change this to your default branch if it's different
+      - main  # Change to your default branch if necessary
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest  # Use Windows environment
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Install LaTeX
+      - name: Install MiKTeX
         run: |
-          sudo apt-get update
-          sudo apt-get install -y texlive-full
+          choco install miktex -y  # Install MiKTeX using Chocolatey
 
-      - name: Compile LaTeX
+      - name: Compile LaTeX with latexmk
         run: |
-          latexmk -pdf main.tex  # Ensure 'main.tex' is the correct filename
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./  # Change this if your PDF is in a subdirectory
+          latexmk -pdf main.tex  # Compile your main.tex file with latexmk
